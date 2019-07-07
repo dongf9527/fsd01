@@ -1,0 +1,85 @@
+/* Header */
+.htmleaf-header{
+	padding: 1em 190px 1em;
+	letter-spacing: -1px;
+	text-align: center;
+	background: #66677c;
+}
+.htmleaf-header h1 {
+	color: #D5D6E2;
+	font-weight: 600;
+	font-size: 2em;
+	line-height: 1;
+	margin-bottom: 0;
+}
+.htmleaf-header h1 span {
+	display: block;
+	font-size: 60%;
+	font-weight: 400;
+	padding: 0.8em 0 0.5em 0;
+	color: #c3c8cd;
+}
+
+h1 { 
+	text-align: center;
+}
+
+h2 { 
+	text-align: center;
+	font-size: 50px;
+}
+
+#custom_player {
+    text-align: center;
+	padding:1em 1em .5em;
+}
+
+video {
+	border:1px solid #2e52a4;
+	width:600px;
+	height:480px;
+	background:#000;
+}
+
+.progress {
+    margin: auto;
+	width:600px;
+	height:16px;
+	margin-bottom: 5px;
+	background-color: white;
+	
+}
+progress::-moz-progress-bar { background:#2e52a4; }
+
+#mediaplaylist {
+	width: 600px;
+	border-top: 1px solid #020815;
+	margin: auto;
+}
+#mediaplaylist  h2 { font-size:12px; }
+
+#play-list {
+	padding:0;
+	font-size:35px;
+	list-style-type:none;
+}
+#play-list li {
+	cursor:pointer;
+	padding-left:15px;
+}
+
+#list-group-item {
+	font-size: 20px;
+}
+
+#play_button {
+    color: orange;
+}
+
+.far fa-thumbs-up {
+	color: green;
+}
+
+.far fa-thumbs-down {
+	color: red;
+}
