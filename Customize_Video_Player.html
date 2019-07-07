@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css"
+        integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+    <link href='css/custom_player.css' rel='stylesheet' />
+  
+    <script src='js/custom_player.js'></script>
+    <title>Video Player</title>
+</head>
+
+<body>
+    <div class="htmleaf-container">
+        <header class="htmleaf-header">
+            <h1> <strong>Custom HTML5 Video Player</strong>
+                <span>Auther: wpeter@cn.ibm.com</span></h1>
+        </header>
+    </div>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-8" id='custom_player'>
+                <video id='media-video'>
+                    <source src='./video/example.mp4' type='video/mp4'>
+                </video>
+                <div class="progress">
+                    <div id='progress-bar' class="progress-bar bg-dark progress-bar-success progress-bar-striped active"
+                        role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                    </div>
+                </div>
+                <div id='media_control' style="margin-bottom: 5px;">
+                    <button type='button' id='replay_button' class='btn btn-dark' onclick='replayMedia();'>
+                        <em class="fas fa-reply" style="font-size: 25px;"></em>
+                    </button>
+                    <button type="button" id='play_button' class="btn btn-dark" onclick='togglePlayPause();'>
+                        <em id="play-pause-icon" class="far fa-play-circle" style="font-size: 25px;"></em>
+                    </button>
+                    <button type='button' id='stop_button' class='btn btn-dark' onclick='stopPlayer();'>
+                        <em class='fas fa-stop-circle' style="font-size: 25px;"></em></button>
+                    <button type='button' id='volume_inc_button' class='btn btn-dark' onclick='changeVolume("+");'>
+                        <em class="fas fa-plus-circle" style="font-size: 25px;"></em></button>
+                    <button type='button' id='volume_dec_button' class='btn btn-dark' onclick='changeVolume("-");'>
+                        <em class="fas fa-minus-circle" style="font-size: 25px;"></em></button>
+                    <button type='button' id='mute_button' class='btn btn-dark' onclick='toggleMute("true");'>
+                        <em id='mute-icon' class="fas fa-volume-up" style="font-size: 25px;"></em>
+                        <span id='video-volume' class="badge badge-light" style="color: lightblue;"></span></button>
+                    <button type='button' id='like_button' class='btn btn-dark' onclick='likeVideo()'
+                        style="color: green">
+                        <em class="far fa-thumbs-up" style="font-size: 25px;"></em>
+                        <span id='video-like' class="badge badge-light"></span></button>
+                    <button type='button' id='unlike_button' class='btn btn-dark' onclick='unlikeVideo()'
+                        style="color: red;">
+                        <em class="far fa-thumbs-down" style="font-size: 25px;"></em>
+                        <span id='video-unlike' class="badge badge-light"></span></button>
+                </div>
+            </div>
+
+            <div class="col-sm-4" id='mediaplaylist'>
+                <h1 style="color:blueviolet"><strong>Play list</strong></h1>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" onclick='loadVideo("./video/example.mp4");'
+                        style="font-size:20px; color:black">1. Movie 1 (click to play) </li>
+                    <li class="list-group-item" onclick='loadVideo("./video/example2.mp4");'
+                        style="font-size:20px; color:black">2. Movie 2 (click to play)</li>
+                    <li class="list-group-item" onclick='loadVideo("./video/example3.mp4");'
+                        style="font-size:20px; color:black">3. Movie 3 (click to play)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
